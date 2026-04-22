@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">圖片編輯器</string>
+    <string name="previous_day">前一天</string>
+    <string name="next_day">後一天</string>
+    <string name="all_days">全部日期</string>
+    <string name="settings">設置</string>
+    <string name="languages">語言</string>
+    <string name="information">關於</string>
+    <string name="permission_request">點擊授權訪問本機圖片</string>
+    <string name="edit">編輯</string>
+    <string name="delete">刪除</string>
+    <string name="details">詳情</string>
+    <string name="flip">翻轉</string>
+    <string name="crop">裁切</string>
+    <string name="draw">塗鴉</string>
+    <string name="color">顏色</string>
+
+    <string name="information_content">
+        圖片管理工具\n
+        一款用於練習 Android 開發的練手專案。\n\n
+        主要功能：\n
+        • 瀏覽手機全部本機圖片\n
+        • 根據建立日期篩選手機本機圖片\n
+        • 圖片編輯\n\n
+        版本：1.0.0\n
+        作者：朱浩楠\n
+        e-mail：a987029855@hotmail.com\n
+        GitHub：https://github.com/ZHN239\n
+        開發環境：Android Studio\n\n
+        ⚠️ 聲明：本應用僅用於學習交流，請勿商用。
+    </string>
+
+</resources>

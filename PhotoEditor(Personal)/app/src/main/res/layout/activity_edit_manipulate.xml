@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/main"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/black">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/black">
+
+        <ImageButton
+            android:id="@+id/back_to_edit"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            app:layout_constraintDimensionRatio="1"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:src="@drawable/ic_back_white"
+            android:background="@color/black"/>
+
+        <ImageButton
+            android:id="@+id/btn_save"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            app:layout_constraintDimensionRatio="1"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:src="@drawable/ic_save_white"
+            android:background="@color/black"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.example.photoeditor.DrawView
+        android:id="@+id/dv_edit"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:scaleType="fitCenter" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="104dp"
+        android:padding="8dp">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_flip"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/btn_crop"
+            android:textSize="18sp"
+            android:text="@string/flip"
+            android:drawableTop="@drawable/ic_flip" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_crop"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/btn_flip"
+            app:layout_constraintEnd_toStartOf="@id/btn_draw"
+            android:textSize="18sp"
+            android:text="@string/crop"
+            android:drawableTop="@drawable/ic_crop"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_color"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@id/btn_flip"
+            app:layout_constraintEnd_toStartOf="@id/btn_draw"
+            android:textSize="18sp"
+            android:text="@string/color"
+            android:drawableTop="@drawable/ic_color"
+            android:visibility="gone"/>
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_draw"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/btn_crop"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="@string/draw"
+            android:textSize="18sp"
+            android:drawableTop="@drawable/ic_draw"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

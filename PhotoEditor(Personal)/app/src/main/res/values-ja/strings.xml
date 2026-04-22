@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">写真エディタ</string>
+    <string name="previous_day">前の日</string>
+    <string name="next_day">次の日</string>
+    <string name="all_days">全ての日付</string>
+    <string name="settings">設定</string>
+    <string name="languages">言語</string>
+    <string name="information">インフォーメーション</string>
+    <string name="permission_request">写真へのアクセスを許可</string>
+    <string name="edit">編集</string>
+    <string name="delete">削除</string>
+    <string name="details">詳細</string>
+    <string name="flip">反転</string>
+    <string name="crop">トリミング</string>
+    <string name="draw">描画</string>
+    <string name="color">色</string>
+
+    <string name="information_content">
+        写真管理ツール\n
+        Android開発の練習用に作成したプロジェクトです。\n\n
+        主な機能：\n
+        • 端末内のすべての写真を表示\n
+        • 作成日時で写真を絞り込み\n
+        • 写真編集機能\n\n
+        バージョン：1.0.0\n
+        作者：朱浩楠\n
+        e-mail：a987029855@hotmail.com\n
+        GitHub：https://github.com/ZHN239\n
+        開発環境：Android Studio\n\n
+        ⚠️ 注意：このアプリは学習・練習用のみです。商用利用は禁止されています。
+    </string>
+
+</resources>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="material_button_style" parent="Widget.Material3.Button">
+        <item name="strokeColor">@color/black</item>
+        <item name="strokeWidth">2dp</item>
+        <item name="backgroundTint">@color/white</item>
+        <item name="cornerRadius">0dp</item>
+        <item name="android:textColor">@color/black</item>
+
+    </style>
+
+    <style name="checkbox_style">
+
+        <item name="buttonTint">@color/black</item>
+
+    </style>
+    
+</resources>

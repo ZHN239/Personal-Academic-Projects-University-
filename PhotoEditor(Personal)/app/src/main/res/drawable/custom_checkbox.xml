@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+        <!-- 未选中：只有白色边框，内部透明 -->
+    <item android:state_checked="false">
+        <shape android:shape="rectangle">
+            <corners android:radius="4dp" />
+            <solid android:color="@android:color/transparent" />
+            <stroke
+                android:width="2dp"
+                android:color="#FFFFFF" />  <!-- 边框颜色 -->
+        </shape>
+    </item>
+
+    <!-- 选中：白色边框 + 绿色对勾 -->
+    <item android:state_checked="true">
+        <layer-list>
+            <!-- 底层：白色边框 -->
+            <item>
+                <shape android:shape="rectangle">
+                    <corners android:radius="4dp" />
+                    <solid android:color="@android:color/transparent" />
+                    <stroke
+                        android:width="2dp"
+                        android:color="#FFFFFF" />
+                </shape>
+            </item>
+
+            <!-- 上层：绿色对勾（自己画的，不用系统资源） -->
+            <item
+                android:width="16dp"
+                android:height="16dp"
+                android:gravity="center">
+                <vector xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:width="24dp"
+                    android:height="24dp"
+                    android:viewportWidth="24"
+                    android:viewportHeight="24"
+                    android:tint="#00E676"> <!-- 绿色对勾 -->
+                    <path
+                        android:fillColor="@android:color/white"
+                        android:pathData="M9,16.17L4.83,12l-1.42,1.41L9,19 21,7l-1.41,-1.41z"/>
+                </vector>
+            </item>
+        </layer-list>
+    </item>
+
+    </selector>
