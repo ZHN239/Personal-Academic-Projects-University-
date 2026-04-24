@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Book Management System</title>
+  <style>
+    body {
+      background-color: rgb(239, 222, 192);
+      font-family: sans-serif;
+    }
+    button {
+      margin: 5px;
+    }
+    img {
+      height: 120px;
+    }
+    .book {
+      border-bottom: 1px solid #aaa;
+      padding: 10px;
+    }
+    th, td {
+      border: 1px solid;
+      padding: 8px;
+      text-align: left;
+    }
+    .tdWithBtnIn{
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+<div id="app" style="min-height:100vh;background-color: rgb(239, 222, 192); "></div>
+
+<script>
+/*******************************
+ * グローバル状態
+ *******************************/
+let currentPage = 'home'   // home | search | search_result | mylist | detail
+let searchResult = []
+let myList = []
+let searchKeyword
+
+/*******************************
+ * ページレンダリング関数
+ *******************************/
+function render() {
+  const app = document.getElementById('app')
+
+  if (currentPage === 'home') {
+    app.innerHTML = `
+      <div style="display: grid; place-items: center; min-height:100vh;">
+        <h1 style="text-align: center;">Book Management System</h1>
+        <img style="display: block; width: 300px;height:300px;" src="https://github.com/ZHN239/share/blob/main/illustration.jpg?raw=true">
+        <div>
+          <button id="goSearch" style="width: 100px; margin-right: 20px;">Search</button>
+          <button id="goMyList" style="width: 100px; margin-left: 20px;">My List</button>
+        </div>
+      </div>
+    `
+  }
+
+  if (currentPage === 'search') {
+    app.innerHTML = `
+      <button id="backHome" >Back</button>
+      <div style="display: grid; place-items: center; min-height:100vh;">
+        <h1>Search By Google Books</h1>
+        <img style="display: block; width: 300px;height:300px;" src="https://github.com/ZHN239/share/blob/main/illustration.jpg?raw=true">
+        <div style="text-align:center;">
+          <input id="keyword" style="display:block;margin-bottom:20px;" placeholder="書名/著者名/出版社名/ISBN">
+          <button id="searchBtn">Search</button>
+        </div>
+      </div>
+    `
+  }
+
+  if (currentPage === 'search_result') {
+    app.innerHTML = `
+      <button id="goSearch">Back</button>
+      <h1 style="text-align: center;">"${searchKeyword}"の検索結果一覧</h1>
+      <span>検索結果の件数: ${searchResult.length}</span>
+      <div style="text-align: center;">
+          <input id="keyword" value="${searchKeyword}" style="width: 200px;margin-right:30px;">
+          <button style="width: 50px;" id="searchBtn">検索</button>
+      </div>
+      <table style="border:2px solid black;width:100%;" id="tab">
+          <tr>
+              <th>タイトル</th>
+              <th>著者</th>
+              <th>出版社</th>
+              <th>ISBN/PKEY</th>
+              <th>表紙</th>
+              <th>マイリストに追加</th>
+          </tr>
+          ${searchResult.map(item=>`         
+            <tr>
+                <td>${item.title}</td>
+                <td>${item.author.join(',')}</td>
+                <td>${item.publisher}</td>
+                <td>${item.id}</td>
+                <td><img src="${item.imgLink}" alt="no image"></td>
+                <td class="tdWithBtnIn"><button class="addBtn" data-title="${item.title}" data-author="${item.author.join(',')}"
+                data-publisher="${item.publisher}" data-id="${item.id}" data-img-link="${item.imgLink}">追加</button></td>
+            </tr>
+            `).join('')}
+      </table>
+    `
+  }
+
+  if (currentPage === 'mylist') {
+    app.innerHTML = `
+      <button id="backHome">Back</button>
+      <div style="text-align:center;">
+        <h1>My List</h1>
+        <table style="border:2px solid black;width:100%;" id="tab">
+          <tr>
+              <th>タイトル</th>
+              <th>著者</th>
+              <th>出版社</th>
+              <th>ISBN/PKEY</th>
+              <th>表紙</th>
+              <th>マイリストから削除</th>
+          </tr>
+          ${myList.map(item=>`         
+            <tr>
+                <td>${item.title}</td>
+                <td>${item.author.join(',')}</td>
+                <td>${item.publisher}</td>
+                <td>${item.id}</td>
+                <td><img src="${item.imgLink}" alt="no image"></td>
+                <td class="tdWithBtnIn"><button class="deleteBtn" data-title="${item.title}" data-author="${item.author.join(',')}"
+                data-publisher="${item.publisher}" data-id="${item.id}" data-img-link="${item.imgLink}">削除</button></td>
+            </tr>
+            `).join('')}
+        </table>
+      </div>
+    `
+  }
+
+  if (currentPage === 'detail') {
+    app.innerHTML = `
+      <button id="backSearch">Back</button>
+      <div>
+        <h1>title:${searchResult.title}</h1>
+        <h1>title:${searchResult.author}</h1>
+        <h1>title:${searchResult.publisher}</h1>
+        <h1>title:${searchResult.id}</h1>
+        <h1>title:${searchResult.imgLink}</h1>
+      </div>
+    `
+  }
+
+  bindEvents()
+}
+
+/*******************************
+ * イベントバインディング
+ *******************************/
+function bindEvents() {
+
+  // 検索ページへ遷移
+  document.getElementById('goSearch')
+    ?.addEventListener('click', () => {
+      currentPage = 'search'
+      render()
+    })
+
+  // My Listページへ遷移、データ取得
+  document.getElementById('goMyList')
+    ?.addEventListener('click', async () => {
+      const res = await fetch('http://localhost:3000/myList/display')
+      myList = await res.json()
+      currentPage = 'mylist'
+      render()
+    })
+
+  // ホームへ戻る
+  document.getElementById('backHome')
+    ?.addEventListener('click', () => {
+      currentPage = 'home'
+      render()
+    })
+
+  // Google Books検索
+  document.getElementById('searchBtn')
+    ?.addEventListener('click', async () => {
+      const keyword = document.getElementById('keyword').value
+      searchKeyword = keyword
+      const res = await fetch(
+        `http://localhost:3000/search?value=${encodeURIComponent(keyword)}`
+      )
+      searchResult = await res.json()
+      currentPage = 'search_result'
+      render()
+    })
+
+  // 検索結果ページから検索ページへ戻る
+  document.getElementById('backSearch')
+    ?.addEventListener('click', () => {
+      currentPage = 'search'
+      render()
+    })
+
+  // My Listに追加
+  document.querySelectorAll('.addBtn').forEach(btn => {
+    btn.addEventListener('click', async () => {
+      const params = new URLSearchParams(btn.dataset)
+      await fetch(`http://localhost:3000/myList/add?${params.toString()}`)
+      alert('追加しました')
+    })
+  })
+
+  // My Listから削除
+  document.querySelectorAll('.deleteBtn').forEach(btn => {
+    btn.addEventListener('click', async () => {
+      const title = btn.dataset.title
+      await fetch(
+        `http://localhost:3000/myList/delete?title=${encodeURIComponent(title)}`
+      )
+      myList = myList.filter(b => b.title !== title)
+      alert('削除しました')
+      render()
+    })
+  })
+}
+
+// 初回レンダリング
+render()
+</script>
+
+</body>
+</html>
