@@ -13,6 +13,7 @@ This repository contains projects I worked on during my university years, includ
 ### Personal
 
 * ###### PhotoEditor(Android Studio,Java)
+* ###### 2Drun(Unity,C#)
 
 
 
@@ -22,6 +23,4 @@ This repository contains projects I worked on during my university years, includ
 * ###### SmartACControlSystem(Google Apps Script/Google Sheets/LINE BOT/REMO3)  (collaborative)
 * ###### ArithmeticRunner(pygame(Python))(collaborative)
 * ###### DodgeBallFlagCapture(processing) (independent)
-
-
 

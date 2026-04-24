@@ -1,0 +1,97 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\ZHN\\Desktop\\UnityProject\\2Drun\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{EB6685BA-871A-9196-6F63-75FB668F39F1}|Assembly-CSharp.csproj|c:\\users\\zhn\\desktop\\unityproject\\2drun\\assets\\scripts\\coin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB6685BA-871A-9196-6F63-75FB668F39F1}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\coin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB6685BA-871A-9196-6F63-75FB668F39F1}|Assembly-CSharp.csproj|C:\\Users\\ZHN\\Desktop\\UnityProject\\2Drun\\assets\\scripts\\character.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB6685BA-871A-9196-6F63-75FB668F39F1}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\character.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB6685BA-871A-9196-6F63-75FB668F39F1}|Assembly-CSharp.csproj|C:\\Users\\ZHN\\Desktop\\UnityProject\\2Drun\\assets\\scripts\\audiomanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB6685BA-871A-9196-6F63-75FB668F39F1}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\audiomanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB6685BA-871A-9196-6F63-75FB668F39F1}|Assembly-CSharp.csproj|C:\\Users\\ZHN\\Desktop\\UnityProject\\2Drun\\assets\\scripts\\background.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB6685BA-871A-9196-6F63-75FB668F39F1}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\background.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "coin.cs",
+              "DocumentMoniker": "C:\\Users\\ZHN\\Desktop\\UnityProject\\2Drun\\Assets\\Scripts\\coin.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\coin.cs",
+              "ToolTip": "C:\\Users\\ZHN\\Desktop\\UnityProject\\2Drun\\Assets\\Scripts\\coin.cs",
+              "RelativeToolTip": "Assets\\Scripts\\coin.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvw0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-08T03:22:26.858Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e78e0cf7-2e4e-48a7-bf7f-a94d9330a3be}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AudioManager.cs",
+              "DocumentMoniker": "C:\\Users\\ZHN\\Desktop\\UnityProject\\2Drun\\Assets\\Scripts\\AudioManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\AudioManager.cs",
+              "ToolTip": "C:\\Users\\ZHN\\Desktop\\UnityProject\\2Drun\\Assets\\Scripts\\AudioManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\AudioManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-07T13:33:49.401Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "character.cs",
+              "DocumentMoniker": "C:\\Users\\ZHN\\Desktop\\UnityProject\\2Drun\\Assets\\Scripts\\character.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\character.cs",
+              "ToolTip": "C:\\Users\\ZHN\\Desktop\\UnityProject\\2Drun\\Assets\\Scripts\\character.cs",
+              "RelativeToolTip": "Assets\\Scripts\\character.cs",
+              "ViewState": "AgIAACUAAAAAAAAAAAAUwBwAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-07T08:01:44.419Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "background.cs",
+              "DocumentMoniker": "C:\\Users\\ZHN\\Desktop\\UnityProject\\2Drun\\Assets\\Scripts\\background.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\background.cs",
+              "ToolTip": "C:\\Users\\ZHN\\Desktop\\UnityProject\\2Drun\\Assets\\Scripts\\background.cs",
+              "RelativeToolTip": "Assets\\Scripts\\background.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-07T07:12:53.208Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
